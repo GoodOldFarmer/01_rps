@@ -1,2 +1,2 @@
 # 01_rps
-Odin's Rock Paper Scissors
+Odin's Rock Paper Scissors lesson
