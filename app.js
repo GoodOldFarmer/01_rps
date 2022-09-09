@@ -1,5 +1,8 @@
 // 01_rps : javascript file for the Odin Project
 
+// TODO : 
+// - refaire une partie
+// - faire plusieures parties d'un coup
 
 
 let computerSelection, playerSelection
@@ -17,18 +20,16 @@ function getComputerChoice(){
 // Selection du joueur
 playerSelection = prompt(' Choose rock, paper or scissors ').toLowerCase()
 
-
-
-
+// Selection du cpu
 computerSelection = getComputerChoice()
 
-// Une partie de Rock Paper Scissors
-
+// Lance une partie de Rock Paper Scissors
 function playRound(playerSelection, computerSelection){
-
+    console.log("player choose " + playerSelection)
+    console.log("computer choose "+ computerSelection)
 
     if (playerSelection === computerSelection){
-        console.log (" tie!")
+        console.log ("tie!")
     } 
     else if(playerSelection === 'rock' && computerSelection === 'paper'){
         console.log("cpu win this round")
@@ -50,12 +51,13 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+// Si la selection du joueur n'est pas incluse dans arr, on invite le joueur à une nouvelle selection
 
 if (arr.includes(playerSelection)){
     playRound(playerSelection, computerSelection)
+    
 
 } else {
     alert(playerSelection + " is not a valid choice ")
-
+    window.location.reload();
 }
-
